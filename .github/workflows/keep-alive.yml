@@ -1,9 +1,9 @@
 name: ClawCloud 自动登录保活
 
-于:
+on:
   schedule:
-    - cron: '0 17 */5 * *'      
-      timezone: 'Asia/Shanghai'  
+    - cron: '0 17 */5 * *'      # UTC 17:00 = 北京时间次日凌晨 01:00，每 5 天一次
+      timezone: 'Asia/Shanghai'  # 直接指定北京时间（推荐写法）
   workflow_dispatch:
 
 jobs:
